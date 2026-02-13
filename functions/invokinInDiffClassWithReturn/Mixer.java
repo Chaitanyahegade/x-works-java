@@ -14,4 +14,19 @@ class Mixer{
             
         return isOn;
     }
+
+    static int currentSpeed=1;
+    static int maxSpeed = 6;
+    static int increase_speed(){
+        if(!statusCheck()){
+            System.out.println("Turn on the mixer please");
+        }
+        if(currentSpeed<maxSpeed){
+            currentSpeed+=1;
+        }
+        else{
+            System.out.println("This is the max speed for the mixer buddy");
+        }
+        return currentSpeed;
+    }
 }
